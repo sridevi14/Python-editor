@@ -1,26 +1,19 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
+  mode: 'development',
   entry: {
-    index: path.resolve(__dirname, './src/index.js')
+    index: path.resolve(__dirname, './src/index.js'),
   },
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: '[name].bunde.js'
+    filename: '[name].bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "./src/index.html")
-    })
-  ],
-  rules: [
-    {
-      test: /worker.js$/,
-      use: [
-        {
-          loader: `val-loader`,
-        },
-      ],
-    },
-  ],
-}
+      template: path.resolve(__dirname, "./src/index.html"),
+    }),
+  ]
+
+};
