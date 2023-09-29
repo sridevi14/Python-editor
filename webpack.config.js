@@ -12,6 +12,7 @@ module.exports = {
       'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Resource-Policy': 'same-site',
     },
+    contentBase: "./build",
   },
   output: {
     path: path.resolve(__dirname, './build'),
