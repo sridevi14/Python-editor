@@ -11,8 +11,8 @@ module.exports = {
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Resource-Policy': 'same-site',
+      'Cross-Origin-Script-Policy': 'unsafe-none',
     },
-    contentBase: "./build",
   },
   output: {
     path: path.resolve(__dirname, './build'),
