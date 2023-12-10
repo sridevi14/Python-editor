@@ -56,11 +56,14 @@ let fullscreen = false;
        document.exitFullscreen();
        fullscreen = false;
        document.getElementById('editor').classList.remove('editordiv-fullscreen');
+       document.getElementById('editordiv').classList.remove('editordiv-fullscreen')
+
        document.getElementById('output-area').classList.remove('editordiv-fullscreen');
      } else {
       document.getElementById('partition').requestFullscreen();
        fullscreen = true
        document.getElementById('editor').classList.add('editordiv-fullscreen')
+       document.getElementById('editordiv').classList.add('editordiv-fullscreen')
        document.getElementById('output-area').classList.add('editordiv-fullscreen')
      }
    })

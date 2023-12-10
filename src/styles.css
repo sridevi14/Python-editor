@@ -154,9 +154,13 @@ padding: 0 0 0 7px;
   .output-area {
     width: 100%;
     height: 300px;
+    border-left: none;
   }
   .partition{
     width: 100%;
+  }
+  .editordiv-fullscreen{
+    height: 50vh !important
   }
 }
 
@@ -172,9 +176,14 @@ padding: 0 0 0 7px;
   .output-area {
     width: 100%;
     height: 300px;
+    border-left: none;
   }
 
   .partition{
     width: 100%;
+  }
+  .editordiv-fullscreen{
+    height: 50vh !important;
+    border-left: none;
   }
 }
