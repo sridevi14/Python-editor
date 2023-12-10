@@ -5,7 +5,7 @@ import sys
 import fakeprint
 
 sys.stdout = fakeprint.stdout
-sys.stderr = fakeprint.stdout
+sys.stderr = fakeprint.stderr
 sys.stdin = fakeprint.stdin`
 
 async function loadPy() {
@@ -31,7 +31,7 @@ const stdout = {
   },
   flush: () => { },
 }
-//for error mgf from pyodide
+//for error msg from pyodide
 const stderr = {
   write: (s) => {
     postMessage(

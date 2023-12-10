@@ -13,9 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "html-webpack-plugin": "^5.5.3",
+    "py-in-browser": "^1.1.5",
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.3",
     "val-loader": "^5.0.1",
     "webpack": "^5.88.0",
     "webpack-dev-server": "^4.15.1"

@@ -6,6 +6,17 @@ module.exports = {
   entry: {
     index: path.resolve(__dirname, './src/index.js'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ]
+      }
+    ]
+  },
   devServer: {
     headers: {
       'Cross-Origin-Opener-Policy': 'same-origin',

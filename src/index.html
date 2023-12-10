@@ -8,132 +8,37 @@
   <title>Python Terminal</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-    }
 
-    #head {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px 0 50px 0;
-    }
-
-    p {
-      text-align: center;
-      margin: 0;
-    }
-
-    h1 {
-      text-align: center;
-      margin: 0;
-      flex-grow: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #main {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    #editordiv {
-      width: 50%;
-      height: 500px;
-      border: 1px solid #ccc;
-    }
-
-    #editor {
-      width: 100%;
-      height: 500px;
-      border: 1px solid #ccc;
-    }
-
-    #terminal {
-      width: 50%;
-      height: 500px;
-      background-color: #000;
-      color: #fff;
-      border: 2px solid black;
-      border-radius: 3px;
-      padding: 5px;
-      font-family: monospace;
-      font-size: 18px;
-      resize: none;
-    }
-
-    #run {
-      margin-right: 21px;
-      margin-left: auto;
-      display: flex;
-      justify-content: flex-end;
-      padding: 6px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-
-      border-radius: 3px;
-      font-size: 17px;
-
-    }
-
-    #theme {
-
-      padding: 6px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      margin-right: 12px;
-      border-radius: 3px;
-      font-size: 17px;
-
-
-    }
-
-    #theme {
-      margin-left: auto;
-    }
-
-    @media screen and (max-width: 480px) {
-      #main {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      #editordiv {
-        width: 100%;
-      }
-
-      #terminal {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div id="head">
-    <h1>Python Terminal</h1>
-    <button id="theme">Theme</button>
-
+    <h3>Python Code Editor</h3>
+    <!-- <button id="theme">Theme</button> -->
   </div>
-  <button id="run"><i class="fa fa-play"></i></button>
   <div id="main">
-    <div id="editordiv">
-      <div id="editor"></div>
+    <div class="partition" id="partition">
+      <div class="inner-heading-part">
+        <div class="clear-editor-part">
+          <p class="cleareditor" id="cleareditor" title="create new">NEW</p>
+        </div>
+        <div class="run-btn">
+          <button id="run" title="Run">Run<i class="fa fa-play play-icon"></i></button>
+        </div>
+        <div class="expand-editor" id="expand-editor" title="FullScreen">
+
+          <i class="fa fa-solid fa-expand"></i>
+        </div>
+      </div>
+      <div id="section">
+        <div id="editordiv">
+          <div id="editor"></div>
+        </div>
+        <div class="output-area" id="output-area">
+          <h4 class="terminal" id="terminal">Click on RUN button to see the output</h4>
+        </div>
+      </div>
     </div>
-    <textarea id="terminal"></textarea>
   </div>
 </body>
 
